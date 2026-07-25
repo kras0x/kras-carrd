@@ -487,37 +487,21 @@ text-align:center;font-size:13px;line-height:1.7;color:rgba(255,255,255,.55);
 margin-bottom:20px;font-weight:300;
 }
 
-/* ── fanny badge ── */
-.fanny-badge{
-border:1px solid rgba(255,45,123,.2);border-radius:12px;
-padding:16px;margin-bottom:20px;
-background:linear-gradient(135deg,rgba(255,45,123,.05),rgba(176,77,255,.05));
-position:relative;overflow:hidden;
+/* ── catchphrase ── */
+.catchphrase{
+text-align:center;margin-bottom:24px;
 }
-.fanny-badge::before{
-content:'';position:absolute;top:0;left:0;right:0;height:1px;
-background:linear-gradient(90deg,transparent,var(--mag),transparent);
+.cp-line{
+font-family:'JetBrains Mono',monospace;font-size:12px;
+letter-spacing:2px;text-transform:uppercase;
+color:rgba(255,255,255,.35);margin-bottom:4px;
 }
-.fanny-title{
-font-family:'JetBrains Mono',monospace;font-size:11px;
-text-transform:uppercase;letter-spacing:3px;color:var(--mag);
-margin-bottom:8px;font-weight:600;
+.cp-line.accent{
+color:var(--mag);font-weight:600;font-size:13px;
+margin-top:8px;
+animation:cpPulse 3s ease-in-out infinite;
 }
-.fanny-role{
-font-family:'JetBrains Mono',monospace;font-size:10px;
-color:var(--cyan);opacity:.6;margin-bottom:10px;letter-spacing:1px;
-}
-.fanny-text{
-font-size:12px;line-height:1.7;color:rgba(255,255,255,.5);font-weight:300;
-margin-bottom:12px;
-}
-.fanny-tags{display:flex;gap:6px;flex-wrap:wrap}
-.tag{
-font-family:'JetBrains Mono',monospace;font-size:9px;
-padding:4px 10px;border-radius:4px;
-background:rgba(255,45,123,.08);border:1px solid rgba(255,45,123,.15);
-color:var(--mag);text-transform:uppercase;letter-spacing:1px;
-}
+@keyframes cpPulse{0%,100%{opacity:.6}50%{opacity:1}}
 
 /* ── tech stack ── */
 .tech-row{
@@ -648,30 +632,6 @@ animation:fadeUp .7s ease forwards;
   background: rgba(0,240,255,.08); border-color: rgba(0,240,255,.2);
   color: var(--cyan);
 }
-
-/* fanny hover expand */
-.fanny-badge{position:relative}
-.fanny-expand {
-  max-height: 0; overflow: hidden; opacity: 0;
-  transition: max-height .45s cubic-bezier(.16,1,.3,1), opacity .3s ease;
-  pointer-events: none;
-}
-.fanny-badge:hover .fanny-expand { max-height: 500px; opacity: 1; }
-.fanny-expand-inner {
-  padding: 12px 0 0; font-size: 11px; line-height: 1.7;
-  color: rgba(255,255,255,.5); font-weight: 300;
-  font-family: 'JetBrains Mono', monospace;
-  border-top: 1px solid rgba(255,45,123,.1);
-  margin-top: 10px;
-}
-.fanny-hint {
-  display: flex; align-items: center; justify-content: center; gap: 6px;
-  font-family: 'JetBrains Mono', monospace; font-size: 9px;
-  color: var(--purp); opacity: .5;
-  margin-top: 8px; letter-spacing: 2px; text-transform: uppercase;
-  animation: hintPulse 2s ease-in-out infinite;
-}
-@keyframes hintPulse{0%,100%{opacity:.3}50%{opacity:.7}}
 
 /* tech tag tooltip */
 .tech-tag { position: relative; cursor: default; }
@@ -890,36 +850,11 @@ Linux ricer. Code architect. Hyper carry.<br>
 Building with Vue, Django, and sheer spite.
 </div>
 
-<!-- fanny badge -->
-<div class="fanny-badge fade-up delay-5">
-<div class="fanny-title">⚡ Fanny Aspirant</div>
-<div class="fanny-role">Hyper / Assassin</div>
-<div class="fanny-text">
-I don't support — I dictate the pace, control the map, and execute.
-</div>
-<div class="fanny-tags">
-<span class="tag">hyper carry</span>
-<span class="tag">assassin</span>
-<span class="tag">野</span>
-</div>
-<div class="fanny-hint">[ hover for details ]</div>
-<div class="fanny-expand">
-<div class="fanny-expand-inner">
-<p>Cable management is everything. Wall spam → steel cable → blue storm → airblade combo. Energy cost calculation is muscle memory — I map kill zones before the enemy jungler even finishes their first buff.</p>
-<p style="margin-top:8px">Cables aren't a movement tool — they're a weapon system. Every angle calculated. Every wall a launchpad. Double cable resets, wall spam combos, pre-level-4 invade paths. I know every energy threshold, every cable length, every wall thickness on every map.</p>
-<p style="margin-top:8px">Fanny doesn't play the game. She breaks it.</p>
-<div style="margin-top:10px">
-<span class="detail-tag">steel cables</span>
-<span class="detail-tag cyan">wall spam</span>
-<span class="detail-tag">airblade</span>
-<span class="detail-tag cyan">energy mgmt</span>
-<span class="detail-tag">blue storm</span>
-<span class="detail-tag cyan">cable reset</span>
-<span class="detail-tag">invade path</span>
-<span class="detail-tag cyan">map control</span>
-</div>
-</div>
-</div>
+<!-- catchphrase -->
+<div class="catchphrase fade-up delay-5">
+<div class="cp-line">I don't do small talk.</div>
+<div class="cp-line">I build, break, and carry.</div>
+<div class="cp-line accent">Let's connect ↓</div>
 </div>
 
 <!-- tech stack -->
